@@ -1,0 +1,78 @@
+---
+title: "Assessment1-part1"
+author: "Ryosuke Otsuka s4663911"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+---
+title: "Assessment 1 part 1"
+author: "Ryosuke Otsuka s4663911"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+1. Setup your Assessment 1 project:
+
+2 Create the heading of the first level and call it RMarkdown editing 
+
+# RMarkdown editing
+
+3. Write 2-3 sentences about RMarkdown (you can google this information or use resources recommended in class - no need to reference)
+
+
+**R Markdown** allows you to create documents that *serve as a neat record of your analysis*. In the world of reproducible research, *we want other researchers to easily understand what we did in our analysis*, **otherwise nobody can be certain that you analysed your data properly**.
+
+4. In the above use bold and italics for editing. 
+
+5. Review the suggested documentation on how to insert links in the .rmd file and include an in-text link to https://rmarkdown.rstudio.com/lesson-8.html 
+
+[here]("https://rmarkdown.rstudio.com/lesson-8.html")
+
+
+6. Insert an R chunk and create a variable with this dataset
+https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018/2018-09-04/fastfood_calories.csv
+```{r}
+#library(tidyverse)
+```
+
+
+```{r}
+
+fastfood <- read.csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018/2018-09-04/fastfood_calories.csv")
+```
+
+
+7. Display the first 10 rows of the dataset using head() and kable(). 
+Display the first 10 rows of the dataset and the first 5 variables
+
+```{r}
+#library(knitr)
+```
+
+```{r}
+head(fastfood, 10)
+```
+```{r}
+head(fastfood[1:10,1:5])
+```
+
+```{r}
+knitr::kable(head(fastfood[1:10,]), "pipe")
+
+```
+
+```{r}
+knitr::kable(head(fastfood[1:10, 1:5]), "pipe")
+
+```
+
+
